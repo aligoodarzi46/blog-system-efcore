@@ -1,4 +1,4 @@
-# Blog System with EF Core
+﻿# Blog System with EF Core
 
 ## Overview
 
@@ -57,13 +57,13 @@ The project will follow a simple layered approach:
 
 ```text
 Client
-  ?
+  ↓
 Controller
-  ?
+  ↓
 Repository
-  ?
+  ↓
 Entity Framework Core
-  ?
+  ↓
 SQL Server
 ```
 
@@ -83,11 +83,11 @@ The initial domain consists of four main entities:
 Relationships:
 
 ```text
-Author 1 ???????? * Post
+Author 1 ──────── * Post
 
-Post   1 ???????? * Comment
+Post   1 ──────── * Comment
 
-Post   * ???????? * Tag
+Post   * ──────── * Tag
 ```
 
 The many-to-many relationship between `Post` and `Tag` will be represented through a join table named `PostTag`.
@@ -110,13 +110,13 @@ A particular focus will be placed on understanding the flow:
 
 ```text
 LINQ
-  ?
+  ↓
 IQueryable
-  ?
+  ↓
 EF Core
-  ?
+  ↓
 SQL
-  ?
+  ↓
 SQL Server
 ```
 
